@@ -64,12 +64,5 @@ def add_time(start, duration, day_of_week=None):
         new_time += f' ({days_later} days later)'
     return new_time
 
-# print(add_time('11:30 AM', '2:32', 'Monday')) # Returns: 2:02 PM, Monday
-# print(add_time('10:10 PM', '3:30')) # Returns: 1:40 AM (next day)
-# print(add_time('8:16 PM', '466:02', 'tuesday')) # Returns: 7:42 AM (9 days later)
-# print(add_time('2:59 AM', '24:00', 'saturDay'))
-# print(add_time('11:30 AM', '2:32', 'Monday'))
-# print(add_time('11:55 AM', '3:12'))
-
 print(add_time('11:59 PM', '24:05', 'Wednesday'))
 print(add_time('8:16 PM', '466:02', 'tuesday'))
