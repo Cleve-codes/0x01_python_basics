@@ -5,6 +5,9 @@ class TreeNode:
     self.left = None
     self.right = None
 
+  def __str__(self):
+    return str(self.key)
+
 class BinarySearchTree:
   def __init__(self):
     self.root =None
@@ -34,6 +37,16 @@ class BinarySearchTree:
   def search(self, key):
     return self._search(self.root, key)
 
+  def _delete(self, node, key):
+    if node is None:
+      return node
+
+    if key < node.key:
+      node.left = self._delete(node.left, key)
+    elif key > node.key:
+      node.right = self._delete(node.right, key)
+    else:
+      pass
 
 bst = BinarySearchTree()
 
