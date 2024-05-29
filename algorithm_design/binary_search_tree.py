@@ -33,3 +33,13 @@ class BinarySearchTree:
 
   def search(self, key):
     return self._search(self.root, key)
+
+
+bst = BinarySearchTree()
+
+nodes = [5, 3, 7, 2, 4, 6, 8]
+
+for node in nodes:
+  bst.insert(node)
+
+print("Seach for 4: ", bst.search(4).key)
