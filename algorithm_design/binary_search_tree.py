@@ -45,8 +45,36 @@ class BinarySearchTree:
       node.left = self._delete(node.left, key)
     elif key > node.key:
       node.right = self._delete(node.right, key)
+      node.key = self._min_value(node.right)
     else:
-      pass
+      if node.left is None:
+        return node.right
+      elif node.right is None:
+        return node.left
+
+        node.key = self._min_value(node,right)
+        node.right = self._delete(node.right, node.key)
+
+    return node
+
+  def _min_value(self, node):
+    while node.left is not None:
+      node = node.left
+    return node
+
+  def delete(self, key):
+    self.root = self._delete(self.root, key)
+
+  def _inorder_traversal(self, node, result):
+    if node:
+      self._inorder_traversal(node.left)
+      result.append(node.key)
+      self._inorder_traversal(node.right)
+
+  def inorder_traversal(self):
+    result = []
+    self._inorder_traversal(self.root, result)
+    return result
 
 bst = BinarySearchTree()
 
