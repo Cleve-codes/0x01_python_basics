@@ -74,3 +74,22 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
         if flag: continue
         M += 1
     return M / num_experiments
+
+# Tests
+
+# hat = Hat(yellow=3, blue=2, green=6)
+hat = Hat(black=6, red=4, green=3)
+print(hat.contents)
+probability = experiment(hat=hat,
+                  expected_balls={"red":2,"green":1},
+                  num_balls_drawn=5,
+                  num_experiments=2000)
+print(probability)
+
+hat = Hat(red=5, orange=4)
+print(hat.contents)
+probability = experiment(hat=hat,
+                  expected_balls={"red":2,"green":1},
+                  num_balls_drawn=5,
+                  num_experiments=2000)
+print(probability)
