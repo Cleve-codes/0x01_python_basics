@@ -2,14 +2,6 @@
 
 This repository contains the code and resources for learning Python fundamentals from FreeCodeCamp.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Topics Covered](#topics-covered)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 In this repository, you will find the code examples, exercises, and explanations for learning Python basics. Whether you are a beginner or have some programming experience, this repository will help you understand the fundamentals of Python programming language.
